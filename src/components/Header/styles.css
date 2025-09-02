@@ -1,0 +1,30 @@
+.container {
+    background-color: #7A9A01;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 10px gray;
+    
+}
+
+.logo {
+    color: white;
+    margin: 18px;
+}
+
+.logo h2 {
+    text-shadow: 0px 1px 20px gray;
+}
+
+.logo h2 a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+
+.logo h2 a:hover {
+    transform: scale(1.01);
+}
