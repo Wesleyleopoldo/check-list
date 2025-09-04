@@ -1,0 +1,63 @@
+.task-container {
+    display: flex;
+    background-color: red;
+    height: 10%;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 12px;
+    width: 95%;
+    border: solid;
+    padding-bottom: 17px;
+}
+
+.checkbox-div .custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #7A9A01;
+    border-radius: 55px;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+}
+
+.task-progress {
+  width: 95%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.checkbox-div .custom-checkbox:checked {
+    background-color: #7A9A01;
+}
+
+.checkbox-div .custom-checkbox:checked::after {
+    content: "✔";
+    
+}
+
+.task-container .tasks-details .task-title {
+    padding: 0;
+    margin: 0;
+}
+
+.task-container .tasks-details .task-description {
+    padding: 0;
+    margin: 0;
+}
+
+.task-container .tasks-details .task-title h3 {
+    font-size: 18px;
+}
+
+.task-container .tasks-details .task-description p {
+    font-size: 12px;
+}
+
+.task-container .tasks-details {
+    width: 100%;
+}

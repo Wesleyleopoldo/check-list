@@ -2,29 +2,36 @@
     background-color: #7A9A01;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
+    justify-content: flex-end;
+    padding: 10px;
     height: 10vh;
     color: white;
+    box-shadow: 0px -2px 10px gray;
+}
+
+.footer .left-space {
+    width: 80px;
 }
 
 .footer .direitos {
-    background-color: blue;
-    text-align: center;
     flex: 1;
+    text-align: center;
+}
+
+.footer .direitos p {
+    text-shadow: 0px 1px 20px gray;
 }
 
 .footer .icon-container {
-    background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    align-self: flex-end;
 }
 
 .footer .icon-container h3 {
     font-size: 10px;
+    text-shadow: 0px 1px 20px gray;
 }
 
 .footer .icon-container .icon {
@@ -34,25 +41,36 @@
 
 @media (max-width: 600px) {
     .footer {
+        background-color: #7A9A01;
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
         height: auto;
-        padding: 20px;
+        color: white;
+    }
+
+    .footer .direitos {
         text-align: center;
     }
 
+    .footer .direitos p {
+        font-size: 11px;
+    }
+
     .footer .icon-container {
-        flex-direction: row;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 2px;
     }
 
     .footer .icon-container h3 {
-        font-size: 12px;
-        margin-right: 8px;
+        font-size: 8px;
     }
 
     .footer .icon-container .icon {
-        font-size: 24px;
+        font-size: 15px
     }
 }
