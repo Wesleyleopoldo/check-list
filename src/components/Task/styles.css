@@ -1,7 +1,7 @@
 .task-container {
     display: flex;
     background-color: red;
-    height: 10%;
+    height: 13%;
     align-items: center;
     padding: 15px;
     gap: 10px;
@@ -60,4 +60,10 @@
 
 .task-container .tasks-details {
     width: 100%;
+}
+
+.task-progress-fill {
+    height: 5px;
+    background-color: #7A9A01;
+    transition: width 0.4s ease;
 }
