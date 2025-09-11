@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles.css"
 import Task from "../Task";
+import { tasks } from "../../datas/data";
 
 export default function Main() {
     const [viewMore, setViewMore] = useState("hidden");
@@ -8,7 +9,7 @@ export default function Main() {
 
     function overFlow() {
         setViewMore("auto");
-        setExpand(true);
+        setExpand(false);
     }
 
     return (
@@ -24,23 +25,18 @@ export default function Main() {
                 </div>
                 <div className="tasks" style={{ overflowY: `${viewMore}` }}>
                     
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
-                    <Task task="Lavar prato" description="Faça isso, isso e isso."/>
+                    {  
+                        tasks.map((task) => (
+                            <Task task={task.title} description={task.description} />
+                        ))
+                    }
+                    
                 </div>
 
-                { !expand && <div className="view-more">
+                { (!expand) && (tasks.length > 6 && <div className="view-more">
                         <button onClick={overFlow}>Ver mais</button>
                     </div>
-                }
+                )}
             </div>
         </main>
     )
