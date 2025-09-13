@@ -1,13 +1,13 @@
 .task-container {
     display: flex;
-    background-color: red;
     height: 13%;
     align-items: center;
     padding: 15px;
     gap: 10px;
     border-radius: 12px;
     width: 95%;
-    border: solid;
+    box-shadow: 0px 0px 5px grey;
+    
     padding-bottom: 17px;
 }
 
@@ -24,11 +24,11 @@
 }
 
 .task-progress {
-  width: 95%;
-  height: 5px;
-  background-color: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
+    width: 95%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .checkbox-div .custom-checkbox:checked {
@@ -37,12 +37,16 @@
 
 .checkbox-div .custom-checkbox:checked::after {
     content: "✔";
-    
+
 }
 
 .task-container .tasks-details .task-title {
     padding: 0;
     margin: 0;
+}
+
+.task-container .tasks-details .task-title h3{
+    height: 19px;
 }
 
 .task-container .tasks-details .task-description {
@@ -65,5 +69,83 @@
 .task-progress-fill {
     height: 5px;
     background-color: #7A9A01;
-    transition: width 0.4s ease;
+    transition: width 0.3s ease;
+}
+
+.task-description p {
+    padding-bottom: 1px;
+    padding-top: 0px;
+}
+
+@media (max-width: 800px) {
+    .task-container {
+        display: flex;
+        background-color: red;
+        height: 13%;
+        align-items: center;
+        padding: 10px 10;
+        gap: 10px;
+        border-radius: 12px;
+        width: 95%;
+        border: solid;
+        padding-bottom: 17px;
+    }
+
+    .checkbox-div .custom-checkbox {
+        margin-top: 6px;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #7A9A01;
+        border-radius: 55px;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+    }
+
+    .task-progress {
+        width: 95%;
+        height: 3px;
+        background-color: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .checkbox-div .custom-checkbox:checked {
+        background-color: #7A9A01;
+    }
+
+    .checkbox-div .custom-checkbox:checked::after {
+        content: "✔";
+
+    }
+
+    .task-container .tasks-details .task-title {
+        padding: 0;
+        margin: 0;
+    }
+
+    .task-container .tasks-details .task-description {
+        padding: 0;
+        margin: 0;
+    }
+
+    .task-container .tasks-details .task-title h3 {
+        font-size: 12px;
+    }
+
+    .task-container .tasks-details .task-description p {
+        font-size: 10px;
+    }
+
+    .task-container .tasks-details {
+        width: 100%;
+    }
+
+    .task-progress-fill {
+        height: 5px;
+        background-color: #7A9A01;
+        transition: width 0.4s ease;
+    }
 }

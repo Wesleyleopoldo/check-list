@@ -8,8 +8,9 @@ export default function Task(props) {
     function fillTask(e) {
         const isChecked = e.target.checked;
         setChecked(isChecked);
-
         setProgress(isChecked ? 100 : 0);
+
+        props.onCheck(e.target.checked);
     }
 
     return (

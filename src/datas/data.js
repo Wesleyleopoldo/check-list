@@ -30,17 +30,17 @@ export const tasks = [
         description: "Faça isso, isso e isso."
     },
     {
-        id: "6",
+        id: "7",
         title: "Lavar Louça",
         description: "Faça isso, isso e isso."
     },
     {
-        id: "6",
+        id: "8",
         title: "Lavar Louça",
         description: "Faça isso, isso e isso."
     },
     {
-        id: "6",
+        id: "9",
         title: "Lavar Louça",
         description: "Faça isso, isso e isso."
     },    

@@ -20,10 +20,6 @@ html, body, #root, .home {
   height: 100%;
 }
 
-header {
-  min-height: 10vh;
-}
-
 main {
   flex: 1;
 }
