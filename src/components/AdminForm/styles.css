@@ -1,0 +1,89 @@
+.content-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6E6E6;
+}
+
+.content-admin .admin-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 15px;
+    border: none;
+    gap: 5px;
+    align-items: center;
+    background-color: white;
+
+    box-shadow: 0px 0px 10px grey;
+}
+
+.content-admin .admin-container .header-form-task {
+    display: flex;
+    /* Ativa o Flexbox */
+    justify-content: space-between;
+    /* Espalha os itens, colocando o espaço no meio */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
+    width: 100%;
+    /* Ocupa toda a largura */
+    padding: 10px;
+    /* Adiciona um espaçamento interno */
+    box-sizing: border-box;
+    /* Garante que o padding não aumente a largura */
+    border-bottom: 1px solid #ccc;
+}
+
+.content-admin .admin-container .header-form-task .icon-exit {
+    background: none;
+    /* Remove o fundo do botão */
+    border: none;
+    /* Remove a borda do botão */
+    font-size: 2em;
+    /* Ajusta o tamanho do ícone */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    padding: 0 10px;
+    /* Adiciona um pequeno espaçamento ao redor do ícone */
+    position: absolute;
+    /* Remove o ícone do fluxo do flexbox */
+    left: 10px;
+    /* Posiciona o ícone no canto superior esquerdo */
+    top: 3.9%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta a posição para centralizar */
+    color: #333;
+    /* Cor do ícone */
+}
+
+.content-admin .admin-container .header-form-task .title-form {
+    flex-grow: 1;
+    /* Permite que o título ocupe o espaço restante */
+    text-align: center;
+    /* Centraliza o texto do título */
+    margin: 0;
+    /* Remove margens padrão do h1 */
+    font-size: 1.2em;
+    /* Tamanho da fonte do título */
+}
+
+.content-admin .admin-container form {
+    height: 80%;
+    width: 100%;
+    gap: 10px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    background-color: red;
+}
+
+.content-admin .admin-container form input {
+    height: 35px;
+    width: 80%;
+}
