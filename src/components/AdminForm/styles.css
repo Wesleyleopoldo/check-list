@@ -70,7 +70,7 @@
     /* Tamanho da fonte do título */
 }
 
-.content-admin .admin-container form {
+.content-admin .admin-container .admin-form {
     height: 80%;
     width: 100%;
     gap: 10px;
@@ -83,7 +83,55 @@
     background-color: red;
 }
 
-.content-admin .admin-container form input {
+.content-admin .admin-container .admin-form .inputs-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-admin .admin-container .admin-form .inputs-div .label-div-title {
+    padding: 2px 0;
+    width: 70%;
+}
+
+.content-admin .admin-container .admin-form .inputs-div .label-div-description {
+    padding: 2px 0;
+    width: 70%;
+}
+
+.content-admin .admin-container .admin-form .inputs-div input {
     height: 35px;
-    width: 80%;
+    width: 70%;
+    padding: 0 10px;
+    color: black;
+}
+
+.content-admin .admin-container .admin-form .inputs-div textarea {
+    resize: none;
+    height: 7rem;
+    color: black;
+    width: 70%;
+    padding: 10px 10px;
+}
+
+.content-admin .admin-container .admin-form .inputs-div .button-submit {
+    background-color: aqua;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.content-admin .admin-container .admin-form .inputs-div .button-submit button {
+    background-color: var(--color-default);
+    border: none;
+    width: 10vh;
+    height: 2rem;
+    border-radius: 15px;
+    margin: 0;
+    cursor: pointer;
 }
