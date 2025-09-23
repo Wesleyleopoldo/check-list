@@ -26,29 +26,29 @@ export default function Main() {
                     <div className="title-tasks">
                         <h1>Tarefas</h1>
                     </div>
-                        <div className="progress-bar">
-                            <div className="progress-fill" style={{ width: `${progressPercent}%`}}></div>
-                        </div>
+                    <div className="progress-bar">
+                        <div className="progress-fill" style={{ width: `${progressPercent}%` }}></div>
+                    </div>
                 </div>
                 <div className="tasks" style={{ overflowY: viewMore ? "auto" : "hidden" }}>
-                    
-                    {  
+
+                    {
                         tasks.map((task) => (
                             <Task
-                            key={task.id}
-                            task={task.title} 
-                            description={task.description}
-                            checked={completed[task.id]}
-                            onCheck={(isChecked) => handleTaskCheck(task.id, isChecked)}
+                                key={task.id}
+                                task={task.title}
+                                description={task.description}
+                                checked={completed[task.id]}
+                                onCheck={(isChecked) => handleTaskCheck(task.id, isChecked)}
                             />
                         ))
                     }
-                    
+
                 </div>
 
-                { tasks.length > 6 && !viewMore && ( <div className="view-more">
-                        <button onClick={overFlow}>Ver mais</button>
-                    </div>
+                {tasks.length > 6 && !viewMore && (<div className="view-more">
+                    <button onClick={overFlow}>Ver mais</button>
+                </div>
                 )}
             </div>
         </main>
