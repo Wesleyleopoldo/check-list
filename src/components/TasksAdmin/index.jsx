@@ -18,8 +18,8 @@ export default function TasksAdmin(props) {
 
             <div className="checkbox-div">
                 <input type="checkbox" name="checked" id="1" className="custom-checkbox"
-                checked={checked}
-                onChange={fillTask}
+                    checked={checked}
+                    onChange={fillTask}
                 />
             </div>
 
@@ -33,8 +33,14 @@ export default function TasksAdmin(props) {
                 </div>
 
                 <div className="task-progress">
-                    <div className="task-progress-fill" style={{width: `${progress}%`}}></div>
+                    <div className="task-progress-fill" style={{ width: `${progress}%` }}></div>
                 </div>
+
+            </div>
+
+            <div className="options-admin">
+                <button className="btn-editar">Editar</button>
+                <button className="btn-remover">Remover</button>
             </div>
         </div>
     )
