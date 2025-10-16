@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./styles.css"
 import { tasks } from "../../datas/data";
 import TasksAdmin from "../TasksAdmin";
+import { useNavigate } from "react-router-dom";
+import { TasksContext } from "../../contexts/TasksContext";
 
 export default function AdminDashboard() {
     const [viewMore, setViewMore] = useState(false);
-    const [completed, setCompleted] = useState(Array(tasks.length).fill(false));
+    const { tasksState, setTasksState, completed, setCompleted } = useContext(TasksContext);
+    const navigate = useNavigate();
 
     function overFlow() {
         setViewMore(true);
@@ -17,7 +20,25 @@ export default function AdminDashboard() {
         setCompleted(updated);
     }
 
-    const progressPercent = (completed.filter(Boolean).length / tasks.length) * 100;
+    function handleRemove(id) {
+        setTasksState(prev => {
+            const idx = prev.findIndex(t => t.id === id);
+            const newTasks = prev.filter(t => t.id !== id);
+            setCompleted(old => {
+                const copy = [...old];
+                if (idx !== -1) copy.splice(idx, 1);
+                return copy;
+            });
+            return newTasks;
+        });
+    }
+
+    function handleEdit(id) {
+        // navigate to edit page; AdminUpdateTask can read the id from the route
+        navigate(`/admin/update/${id}`);
+    }
+
+    const progressPercent = (completed.filter(Boolean).length / tasksState.length) * 100;
 
     return (
         <main className="content-dashboard">
@@ -33,20 +54,23 @@ export default function AdminDashboard() {
                 <div className="tasks-dashboard" style={{ overflowY: viewMore ? "auto" : "hidden" }}>
 
                     {
-                        tasks.map((task) => (
+                        tasksState.map((task, index) => (
                             <TasksAdmin
                                 key={task.id}
+                                id={task.id}
                                 task={task.title}
                                 description={task.description}
-                                checked={completed[task.id]}
-                                onCheck={(isChecked) => handleTaskCheck(task.id, isChecked)}
+                                checked={completed[index]}
+                                onCheck={(isChecked) => handleTaskCheck(index, isChecked)}
+                                onRemove={() => handleRemove(task.id)}
+                                onEdit={() => handleEdit(task.id)}
                             />
                         ))
                     }
 
                 </div>
 
-                {tasks.length > 6 && !viewMore && (<div className="view-more-dashboard">
+                {tasksState.length > 6 && !viewMore && (<div className="view-more-dashboard">
                     <button onClick={overFlow}>Ver mais</button>
                 </div>
                 )}

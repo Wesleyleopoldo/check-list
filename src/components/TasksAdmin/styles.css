@@ -61,9 +61,25 @@
 .task-container .tasks-details .task-description p {
     font-size: 12px;
 }
+.tasks-details {
+    cursor: pointer;
+    /* make details area flexible so buttons stay at the end */
+    flex: 1 1 auto;
+    min-width: 0; /* allow truncation */
+    display: flex;
+    flex-direction: column;
+}
 
-.task-container .tasks-details {
-    width: 100%;
+/* preview: single-line ellipsis so text truncates before the buttons */
+.task-container .tasks-details .task-description p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.task-container .tasks-details .task-title {
+    margin-bottom: 4px;
 }
 
 .task-progress-fill {

@@ -61,7 +61,21 @@
 .task-container .tasks-details .task-description p {
     font-size: 12px;
 }
+.tasks-details {
+    cursor: pointer;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+/* single-line preview */
+.task-container .tasks-details .task-description p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
 .task-container .tasks-details {
     width: 100%;
 }

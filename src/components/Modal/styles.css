@@ -1,0 +1,70 @@
+
+.overlay {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.container-modal {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    width: 550px;
+    height: 550px;
+
+    padding: 0 45px;
+
+    border-radius: 20px;
+
+    gap: 15px;
+}
+
+.btn-exit-popup button {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    font-size: 1rem;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.task-title-modal {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    height: 50px;
+
+    text-align: center;
+
+    width: 100%;
+
+}
+
+.task-title-modal h1 {
+    margin-bottom: 5px;
+}
